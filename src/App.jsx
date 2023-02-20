@@ -1,32 +1,17 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import './App.css'
+import BookCard from './components/Card'
+import Card from './components/Card'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Card title="A robot story" imageSrc="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFMsYqIfCIEtyog2b8gfkeypDGjjsNeqw_OT1Sggy_SU52Ch33aiMqsZNruTZJWeJpVOw&usqp=CAU" text="Lorem ipsum ipsum ipsum Lorem ipsum ipsum ipsum Lorem ipsum ipsum ipsum Lorem ipsum ipsum ipsum Lorem ipsum ipsum ipsumLorem ipsum ipsum ipsum Lorem ipsum ipsum ipsum"></Card>
+      <Card title="A robot story" imageSrc="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFMsYqIfCIEtyog2b8gfkeypDGjjsNeqw_OT1Sggy_SU52Ch33aiMqsZNruTZJWeJpVOw&usqp=CAU" text="Lorem ipsum ipsum ipsum"></Card>
+      <Card title="A robot story" imageSrc="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFMsYqIfCIEtyog2b8gfkeypDGjjsNeqw_OT1Sggy_SU52Ch33aiMqsZNruTZJWeJpVOw&usqp=CAU" text="Lorem ipsum ipsum ipsum"></Card>
     </div>
   )
 }

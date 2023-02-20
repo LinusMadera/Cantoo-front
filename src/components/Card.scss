@@ -1,0 +1,61 @@
+$background-one: #08090D;
+$main-color: #C9CEDF;
+$accent-one: #FF006B;
+$accent-two: #FFE500;
+$accent-tree: #08090D;
+
+@mixin card_style {
+    color:$main-color;
+    outline-color: $main-color;
+    background-image: $main-color;
+    outline: solid .3rem $main-color;
+    border-radius: .7rem;
+    text-align: center;
+    max-width: 400px;
+}
+@mixin card_text {
+    color:$main-color;
+}
+
+@mixin highlight-text-stroke ($Color) {
+    -webkit-text-fill-color: rgba(255, 255, 255, 0); /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: $Color;
+}
+@mixin highlight-text ($Color) {
+    color: $Color;
+}
+
+.card {
+    background-color: $background-one;
+    margin-bottom: 4rem;
+    @include card_style()
+}
+.card-text {
+    @include card_text()
+}
+.card-title {
+    font-size: xx-large;
+    margin-top: .1rem;
+    margin-bottom: 2rem;
+    @include card_text()
+}
+
+.card-img{
+    @include card_style()
+}
+
+.highlight-text-yellow-stroke{
+    @include highlight-text-stroke($accent-one)
+}
+.highlight-text-red-stroke{
+    @include highlight-text-stroke($accent-two)
+}
+
+.highlight-text-yellow{
+    @include highlight-text($accent-one)
+}
+
+.highlight-text-red{
+    @include highlight-text($accent-two)
+}
