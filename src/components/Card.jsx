@@ -1,7 +1,7 @@
 import React from 'react';
-import BrutalistButton from './Button';
 import "./Card.scss";
 
+//title texts
 const Card = (props) => {
     const styles = {
         text : {

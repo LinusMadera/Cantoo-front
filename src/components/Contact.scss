@@ -1,0 +1,164 @@
+$button-background-color: #ffe600;
+$button-outline-color: #000;
+
+.contact_form {
+    color: #000000;
+    display: flex;
+    flex-wrap: nowrap;
+    background: #fff;
+    box-shadow: -12px 10px 0px 0px #515151;
+    padding: 3rem;
+    border-radius: 2rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 3rem;
+    overflow: hidden;
+
+    @media screen and (max-width: 700px) {
+        grid-template-columns: 1fr;
+    }
+    @media screen and (max-width: 600px) {
+        grid-template-columns: 1fr;
+        flex-wrap: wrap;
+    }
+
+    .contact_left_container {
+        .footer_social_icons {
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: nowrap;
+        }
+        width: 50%;
+        @media screen and (max-width: 1200px) {
+            width: 100%;
+            text-align: center;
+        }
+        h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .footer-brutalist-button{
+            
+            color: #000;
+            margin: 0 0 0.5em 0;
+            padding: 1rem;
+            width: fit-content;
+            border-radius: 2rem;
+            background-color: $button-background-color;
+            box-shadow: -12px 10px 0px 0px #000000;
+            cursor: pointer;
+            font-size: x-large;
+            &:active {
+                transform: translate(-12px, 12px);
+                box-shadow: 0px 0px 0px -3px $button-outline-color
+        }
+        }
+
+        .contact_text {
+            font-size: 0.85rem;
+            margin-bottom: 1rem;
+            @media screen and (max-width: 700px) {
+                font-size: 1rem;
+            }
+        }
+        .contact_left {
+            display: flex;
+            align-items: center;
+            margin-top: 1rem;
+            p {
+                font-size: 0.85rem;
+            }
+        }
+        .social_icons {
+            display: flex;
+            margin-top: 1rem;
+
+            div {
+                margin-right: 2rem;
+                border-radius: 2rem;
+                width: fit-content;
+                background-color: #ffe600;
+                box-shadow: -12px 10px 0px 0px #000000;
+                cursor: pointer;
+                font-size: x-large;
+                padding: .5em;
+                &:active {
+                    transform: translate(-12px, 12px);
+                    box-shadow: 0px 0px 0px -3px #000000;
+                }
+                svg {
+                    font-size: 2rem;
+                }
+            }
+        }
+        .copy {
+            margin-top: 2rem;
+        }
+
+        
+    }
+    .contact_right {
+        display: flex;
+        h3 {
+            font-size: 1.5rem;
+        }
+        .row {
+            width: 100%;
+            gap: 0.5rem;
+
+            input {
+
+                border: none;
+                outline: none;
+                margin-bottom: 0.5rem;
+                padding: 1rem 1.5rem;
+                background: #f3f3f3;
+                border-radius: 2rem;
+                font-size: 0.85rem;
+                font-family: "Inter";
+            }
+            textarea {
+                border: none;
+                outline: none;
+                margin-bottom: 0.5rem;
+                padding: 1rem 1.5rem;
+                background: #f3f3f3;
+                border-radius: 2rem;
+                resize: none;
+                min-height: 150px;
+                font-size: 0.85rem;
+                font-family: "Inter";
+            }
+        }
+
+        .btn {
+            margin-top: 1rem;
+            background: #ffe600;
+            box-shadow: -12px 10px 0px 0px #000000;
+            cursor: pointer;
+            border-radius: 2rem;
+            font-size: 2vh;
+            width: 20vw;
+            text-align: center;
+            padding: 1rem;
+            &:active {
+                transform: translate(-12px, 12px);
+                box-shadow: 0px 0px 0px -3px #000000;
+            }
+            @media screen and (max-width: 1200px) {
+                width: 30vw;
+            }
+            @media screen and (max-width: 700px) {
+                width: 60vw;
+            }
+        }
+        a {
+            text-decoration: none;
+            color: #000000;
+        }
+    }
+}
+
