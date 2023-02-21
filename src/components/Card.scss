@@ -1,24 +1,23 @@
 $background-one: #08090D;
 $main-color: #C9CEDF;
+$secondary-color: #000000;
 $accent-one: #FF006B;
 $accent-two: #FFE500;
-$accent-tree: #08090D;
+$accent-three: #ffffff;
 
 @mixin card_style {
     color:$main-color;
-    outline-color: $main-color;
-    background-image: $main-color;
-    outline: solid .3rem $main-color;
     border-radius: .7rem;
     text-align: center;
-    max-width: 400px;
+    width: 400px;
 }
 @mixin card_text {
+    margin: 0;
     color:$main-color;
 }
 
 @mixin highlight-text-stroke ($Color) {
-    -webkit-text-fill-color: rgba(255, 255, 255, 0); /* Will override color (regardless of order) */
+    -webkit-text-fill-color: rgba(255, 255, 255, 0);
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: $Color;
 }
@@ -26,10 +25,23 @@ $accent-tree: #08090D;
     color: $Color;
 }
 
+@mixin custom-bakcground-0 {
+    background-color: #000000;
+    opacity: 1;
+    background-image:  radial-gradient(#ffffff 1.7000000000000002px, transparent 1.7000000000000002px), radial-gradient(#ffffff 1.7000000000000002px, #000000 1.7000000000000002px);
+    background-size: 68px 68px;
+    background-position: 0 0,34px 34px;
+}
+
 .card {
+    font:"inter";
+    display: flex;
+    flex-direction: column;
     background-color: $background-one;
     margin-bottom: 4rem;
-    @include card_style()
+    padding: 2rem;
+    @include card_style();
+    @include custom-bakcground-0();
 }
 .card-text {
     @include card_text()
@@ -42,9 +54,50 @@ $accent-tree: #08090D;
 }
 
 .card-img{
-    @include card_style()
+    object-fit: fill;
+    margin-top: 1rem;
+    border-radius: 2rem;
+    width: 95%;
 }
 
+.card-info{
+    margin-top: 1rem;
+    font-size: x-large;
+    display: flex;
+    align-content: flex-end;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+
+button{
+    --webkit-appearance: none;
+    --moz-appearance: none;
+}
+.brutalistButton {
+    margin: 1% 1% 0% 0%;
+    border-radius: 2rem;
+    border-style: none;
+    font-size: xx-large;
+    margin: 1rem;
+    padding: 0.5rem;
+    padding-left: 30%;
+    padding-right: 30%;
+    cursor: pointer;
+    box-shadow: -14px 19px 0px 0px $accent-three;
+    color: $main-color;
+}
+
+.card-story-text{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.brutalistButton:active {
+    transform: translate(-12px, 12px);
+    box-shadow: 0px 0px 0px 0px $accent-three;
+}
 .highlight-text-yellow-stroke{
     @include highlight-text-stroke($accent-one)
 }

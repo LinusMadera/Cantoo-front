@@ -3,7 +3,14 @@ import BrutalistButton from './Button';
 import "./Card.scss";
 
 const Card = (props) => {
-
+    const styles = {
+        text : {
+            color: `${props.color}`
+        },
+        button : {
+            backgroundColor: `${props.color}`
+        }
+    }
     const onOpen = () => {
         console.log("Open")
     }
@@ -23,18 +30,20 @@ const Card = (props) => {
 
     return (
     <div className="card">
-        <h5 className="card-title">{props.title}</h5>
-        <img src={props.imageSrc} alt={props.title} className="card-img" />
         <div className="card-body">
-            <p className="card-text">{props.text}</p>
-            <div className="card-buttons">
-                <BrutalistButton text="Like" className="btn btn-outline-primary">
-                </BrutalistButton>
-                <BrutalistButton text="Share" onClick={onShare}>
-                </BrutalistButton>
+            <img src={props.imageSrc} alt={props.title} className="card-img" />
+            <div className='card-story-text'>
+                <h5 className="card-title" style={styles.text}>{props.storyTitle}</h5>
+                <h6 className="card-text">{props.text}</h6>
             </div>
-                <BrutalistButton isPrimary="True" text="Open" onClick={onOpen}>
-                </BrutalistButton>
+            <div className='card-info'>
+                <p className="card-text">Type: <span style={styles.text}>{props.type}</span></p>
+                <p className="card-text">№: <span style={styles.text}>{props.number}</span></p>
+                <p className="card-text">Launch: <span style={styles.text}>{props.launch}</span></p>
+            </div>
+            <button className='brutalistButton' style={styles.button}>
+                <span className="brutalistText" onClick={props.onClick}>Open</span>
+            </button>
         </div>
     </div>
     );
