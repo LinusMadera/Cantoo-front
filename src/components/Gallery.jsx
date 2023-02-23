@@ -6,6 +6,14 @@ import { motion } from 'framer-motion';
 import Card from './Card';
 
 const Portfolio = () => {
+  const colors = {
+    "All": "#ffe600",
+    "Sci-Fi": "#78cce2",
+    "Romance": "#E02A38",
+    "Action": "#FA8E2E",
+    "Noir": "#C22590"
+  };
+
   const [tab, setTab] = useState({ name: "all" });
   const [cardsVar,setCards] = useState([])
   const [active, setActive] = useState(0);
@@ -28,14 +36,14 @@ const Portfolio = () => {
   }
 
   return (
-    <div className="container" id="portfolio">
+    <div className="container " id="gallery">
       <motion.div
         initial={{opacity: 0}}
         whileInView={{y: [-50, 0], opacity: 1}}
         className="title"
       
       >
-            <span>Gallery</span>
+            <span className='portfolio'>Gallery</span>
             <h2>Different worlds to immerse yourself in, enjoy :)</h2>
       </motion.div>
       <motion.div
@@ -43,12 +51,13 @@ const Portfolio = () => {
         whileInView={{y: [-50, 0], opacity: 1}}
         className="buttons"
       >
-        {workNavs.map((workNav ,index) => {
+        {workNavs.map((genre ,index) => {
           return (
             <button
+              style={{background: `${colors[genre]}`}}
               onClick={(e) => activeTab(e, index)}
-              className={`filterButton${index}${active === index ? " active" + index  : ""}`}
-              key={index}>{workNav}</button>
+              className={`${active === index ? "press" : ""}`} 
+              key={index}>{genre}</button>
           )
         })}
       </motion.div>

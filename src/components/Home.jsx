@@ -54,7 +54,7 @@ const Home = () => {
           </div>
 
         </div>
-      <a href='#portfolio' className='galleryButton'>
+      <a href='#gallery' className='galleryButton'>
     <button className='brutalistButton'>
         <span className='brutalistTextBlack'>Gallery</span>
     </button>
