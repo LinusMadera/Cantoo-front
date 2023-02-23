@@ -62,7 +62,7 @@ const Portfolio = () => {
         {cardsVar.map((card) => {
           return (
             <div className="workImage" id={card.number}>
-              <Card title={card.title} imageSrc={card.img} text={card.text}></Card>
+              <Card title={card.title} imageSrc={card.img} text={card.text} category={card.category} number={card.number} launch={card.launch} color={card.color} storyTitle={card.title}></Card>
 
             </div>
           )
