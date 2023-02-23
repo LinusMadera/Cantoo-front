@@ -12,7 +12,7 @@ export const icons = [<FaHtml5 />, <FaCss3 />, <DiJavascript />, <SiTypescript /
 
 export const Cards = [
   {
-      "img": "https://computerhistory.org/wp-content/uploads/2019/06/16-9-dummy-image2.jpg",
+      "img": "https://i.imgur.com/1sNegXh.png",
       "title": "Mayor's Mayhem",
       "text": "The charade of the mayor’s murder, mayhem ensued when the mayor was unexpectedly murdered 3 months before the election.",
       "category": "Noir",
@@ -21,7 +21,7 @@ export const Cards = [
       "color": "#C22590"
   },
   {
-      "img": "https://computerhistory.org/wp-content/uploads/2019/06/16-9-dummy-image2.jpg",
+      "img": "https://i.imgur.com/1sNegXh.png",
       "title": "Mayor's Mayhem",
       "text": "The charade of the mayor’s murder, mayhem ensued when the mayor was unexpectedly murdered 3 months before the election.",
       "category": "Action",
@@ -32,5 +32,5 @@ export const Cards = [
 ]
 
 export const workNavs = [
-  "All", "Sci Fi", "Romance", "Action"
+  "All", "Sci Fi", "Romance", "Action","Noir"
 ]
