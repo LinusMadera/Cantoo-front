@@ -47,7 +47,7 @@ const Portfolio = () => {
           return (
             <button
               onClick={(e) => activeTab(e, index)}
-              className={`${active === index ? "active" + index  : ""}`}
+              className={`filterButton${index}${active === index ? " active" + index  : ""}`}
               key={index}>{workNav}</button>
           )
         })}
